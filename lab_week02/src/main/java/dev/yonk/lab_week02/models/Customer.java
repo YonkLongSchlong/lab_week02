@@ -20,7 +20,7 @@ public class Customer {
     @Column(name = "address", nullable = false, columnDefinition = "nvarchar(255)")
     private String address;
 
-    @OneToMany(mappedBy = "customerId")
+    @OneToMany(mappedBy = "customer")
     private List<Order> lstOrder;
 
     public Customer() {

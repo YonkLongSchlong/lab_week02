@@ -28,7 +28,7 @@ public class Employee {
     @Column(name = "status")
     private EmployeeStatus status;
 
-    @OneToMany
+    @OneToMany(mappedBy = "employee")
     private List<Order> lstOrder;
 
     public Employee(String id, String name, LocalDate dob, String email, String phone, String address, EmployeeStatus status) {

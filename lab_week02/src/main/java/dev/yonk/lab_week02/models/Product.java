@@ -3,6 +3,8 @@ package dev.yonk.lab_week02.models;
 import dev.yonk.lab_week02.utils.ProductStatus;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "product")
 public class Product {
@@ -20,6 +22,15 @@ public class Product {
     private String manufacturer;
     @Column(name = "unit", nullable = false)
     private ProductStatus status;
+
+    @OneToMany(mappedBy = "product")
+    private List<OrderDetail> lstOrderDetail;
+
+    @OneToMany(mappedBy = "product")
+    private List<ProductPrice> lstProductPrice;
+
+    @OneToMany(mappedBy = "product")
+    private List<ProductImg> lstProductImg;
 
     public Product() {
     }

@@ -3,15 +3,17 @@ package dev.yonk.lab_week02.models;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Embeddable
-public class ProductPriceId {
+public class ProductPriceId implements Serializable {
 
     @Column(name = "product_id", nullable = false)
     private String productId;
 
-    @Column(name = "local_date_time", nullable = false)
+    @Column(name = "price_date_time", nullable = false)
     private LocalDate priceDateTime;
 
     public ProductPriceId() {
@@ -36,6 +38,19 @@ public class ProductPriceId {
 
     public void setPriceDateTime(LocalDate priceDateTime) {
         this.priceDateTime = priceDateTime;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductPriceId that = (ProductPriceId) o;
+        return Objects.equals(productId, that.productId) && Objects.equals(priceDateTime, that.priceDateTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productId, priceDateTime);
     }
 
     @Override

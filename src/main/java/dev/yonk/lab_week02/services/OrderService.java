@@ -2,14 +2,18 @@ package dev.yonk.lab_week02.services;
 
 import dev.yonk.lab_week02.models.Order;
 import dev.yonk.lab_week02.repositories.OrderRepository;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import java.util.List;
 import java.util.Optional;
 
+@ApplicationScoped
 public class OrderService {
 
     OrderRepository orderRepository;
 
+    @Inject
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
@@ -26,7 +30,7 @@ public class OrderService {
         return orderRepository.getOrderById(id);
     }
 
-    public List<Order> findOrderById (){
+    public List<Order> getAllOrder (){
        return orderRepository.getAllOrder() ;
     }
 

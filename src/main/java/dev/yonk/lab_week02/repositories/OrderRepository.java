@@ -1,6 +1,7 @@
 package dev.yonk.lab_week02.repositories;
 
 import dev.yonk.lab_week02.models.Order;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 import java.util.Optional;
 
+@ApplicationScoped
 public class OrderRepository {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
     EntityManager em = emf.createEntityManager();

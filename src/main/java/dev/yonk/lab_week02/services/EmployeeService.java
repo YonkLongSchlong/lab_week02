@@ -31,8 +31,14 @@ public class EmployeeService {
         employeeRepository.addEmployee(emp);
     }
 
-    public void updateEmployee(Employee emp) {
-        employeeRepository.updateEmployee(emp);
+    public boolean updateEmployee(Employee emp, long id) {
+        Optional<Employee> empOp = employeeRepository.getEmplById(id);
+        if(empOp.isPresent()) {
+            employeeRepository.updateEmployee(emp);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean deleteEmployee(long id) {

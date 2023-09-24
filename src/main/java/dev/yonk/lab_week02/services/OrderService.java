@@ -1,6 +1,7 @@
 package dev.yonk.lab_week02.services;
 
 import dev.yonk.lab_week02.models.Order;
+import dev.yonk.lab_week02.models.Product;
 import dev.yonk.lab_week02.repositories.OrderRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -22,8 +23,14 @@ public class OrderService {
         orderRepository.addOrder(order);
     }
 
-    public void updateOrder(Order order) {
-        orderRepository.updateOrder(order);
+    public boolean updateOrder(Order order, long id) {
+        Optional<Order> orderOp = orderRepository.getOrderById(id);
+        if(orderOp.isPresent()){
+            orderRepository.updateOrder(order);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public Optional<Order> findOrderById (long id){

@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @ApplicationScoped
-@Transactional
+
 public class ProductRepository {
 
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
@@ -38,6 +38,7 @@ public class ProductRepository {
             trans.commit();
             return product == null ? Optional.empty() : Optional.of(product);
         } catch (Exception e) {
+            trans.rollback();
             LOGGER.error(e.getMessage());
         }
         return Optional.empty();
@@ -49,15 +50,18 @@ public class ProductRepository {
            em.persist(product);
            trans.commit();
         } catch (Exception e) {
+            trans.rollback();
             LOGGER.error(e.getMessage());
         }
     }
 
-    public void updateProduct (Product product, long id) {
+    public void updateProduct (Product product) {
         try {
-            TypedQuery<Product> query = em.createQuery("update Product p set p = :product where p.id = :id", Product.class);
-            query.setParameter("id", id).setParameter("product", product).executeUpdate();
+           trans.begin();
+           em.merge(product);
+           trans.commit();
         } catch (Exception e) {
+            trans.rollback();
             LOGGER.error(e.getMessage());
         }
     }

@@ -1,6 +1,6 @@
-package dev.yonk.lab_week02.models;
+package dev.yonk.backend.models;
 
-import dev.yonk.lab_week02.enums.ProductStatus;
+import dev.yonk.backend.enums.ProductStatus;
 import jakarta.persistence.*;
 
 import java.util.List;

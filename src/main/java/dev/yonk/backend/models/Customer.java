@@ -1,4 +1,4 @@
-package dev.yonk.lab_week02.models;
+package dev.yonk.backend.models;
 
 import jakarta.persistence.*;
 

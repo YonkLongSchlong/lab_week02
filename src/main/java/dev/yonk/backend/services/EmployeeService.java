@@ -1,8 +1,8 @@
-package dev.yonk.lab_week02.services;
+package dev.yonk.backend.services;
 
-import dev.yonk.lab_week02.enums.EmployeeStatus;
-import dev.yonk.lab_week02.models.Employee;
-import dev.yonk.lab_week02.repositories.EmployeeRepository;
+import dev.yonk.backend.enums.EmployeeStatus;
+import dev.yonk.backend.models.Employee;
+import dev.yonk.backend.repositories.EmployeeRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 

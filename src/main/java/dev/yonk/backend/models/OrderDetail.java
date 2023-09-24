@@ -1,18 +1,24 @@
-package dev.yonk.lab_week02.models;
+package dev.yonk.backend.models;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "product_price")
-public class ProductPrice {
 
+@Entity
+public class OrderDetail {
     @EmbeddedId
-    private ProductPriceId id;
+    private OrderDetailsId id;
 
     @ManyToOne
     @MapsId("productId")
     @JoinColumn(name = "product_id")
     private Product product;
+
+    @ManyToOne
+    @MapsId("orderId")
+    @JoinColumn(name = "order_id")
+    private Order order;
+    @Column(name = "quantity")
+    private int quantity;
 
     @Column(name = "price")
     private double price;
@@ -20,30 +26,30 @@ public class ProductPrice {
     @Column(name = "note")
     private String note;
 
-    public ProductPrice() {
+    public OrderDetail() {
     }
 
-    public ProductPrice(ProductPriceId id, Product product, double price, String note) {
+    public OrderDetail(OrderDetailsId id, int quantity, double price, String note) {
         this.id = id;
-        this.product = product;
+        this.quantity = quantity;
         this.price = price;
         this.note = note;
     }
 
-    public ProductPriceId getId() {
+    public OrderDetailsId getId() {
         return id;
     }
 
-    public void setId(ProductPriceId id) {
+    public void setId(OrderDetailsId id) {
         this.id = id;
     }
 
-    public Product getProduct() {
-        return product;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public double getPrice() {
@@ -64,9 +70,9 @@ public class ProductPrice {
 
     @Override
     public String toString() {
-        return "ProductPrice{" +
+        return "OrderDetail{" +
                 "id=" + id +
-                ", product=" + product +
+                ", quantity=" + quantity +
                 ", price=" + price +
                 ", note='" + note + '\'' +
                 '}';

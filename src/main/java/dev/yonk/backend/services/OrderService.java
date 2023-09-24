@@ -1,8 +1,7 @@
-package dev.yonk.lab_week02.services;
+package dev.yonk.backend.services;
 
-import dev.yonk.lab_week02.models.Order;
-import dev.yonk.lab_week02.models.Product;
-import dev.yonk.lab_week02.repositories.OrderRepository;
+import dev.yonk.backend.models.Order;
+import dev.yonk.backend.repositories.OrderRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 

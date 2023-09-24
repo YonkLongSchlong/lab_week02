@@ -1,8 +1,6 @@
-package dev.yonk.lab_week02.models;
+package dev.yonk.backend.models;
 
 import jakarta.persistence.*;
-
-import java.math.BigInteger;
 
 @Entity
 @Table(name = "product_image")

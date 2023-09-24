@@ -1,13 +1,13 @@
-package dev.yonk.lab_week02.enums;
+package dev.yonk.backend.enums;
 
-public enum EmployeeStatus {
-    ACTIVE(1),
-    IN_ACTIVE(0),
-    STOP(-1);
+public enum ProductStatus {
+    ONGOING(1),
+    STOP(0),
+    TERMINATE(-1);
 
     private int value;
 
-    EmployeeStatus(int value) {
+    ProductStatus(int value) {
         this.value = value;
     }
 

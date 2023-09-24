@@ -6,15 +6,15 @@
     <persistence-unit name="default">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>dev.yonk.lab_week02.models.Product</class>
-        <class>dev.yonk.lab_week02.models.Employee</class>
-        <class>dev.yonk.lab_week02.models.Order</class>
-        <class>dev.yonk.lab_week02.models.OrderDetail</class>
-        <class>dev.yonk.lab_week02.models.ProductPrice</class>
-        <class>dev.yonk.lab_week02.models.ProductImg</class>
-        <class>dev.yonk.lab_week02.models.Customer</class>
-        <class>dev.yonk.lab_week02.models.ProductPriceId</class>
-        <class>dev.yonk.lab_week02.models.OrderDetailsId</class>
+        <class>dev.yonk.backend.models.Product</class>
+        <class>dev.yonk.backend.models.Employee</class>
+        <class>dev.yonk.backend.models.Order</class>
+        <class>dev.yonk.backend.models.OrderDetail</class>
+        <class>dev.yonk.backend.models.ProductPrice</class>
+        <class>dev.yonk.backend.models.ProductImg</class>
+        <class>dev.yonk.backend.models.Customer</class>
+        <class>dev.yonk.backend.models.ProductPriceId</class>
+        <class>dev.yonk.backend.models.OrderDetailsId</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>

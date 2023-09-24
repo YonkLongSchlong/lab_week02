@@ -1,6 +1,6 @@
-package dev.yonk.lab_week02.repositories;
+package dev.yonk.backend.repositories;
 
-import dev.yonk.lab_week02.models.Order;
+import dev.yonk.backend.models.Order;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.*;
 import org.apache.logging.log4j.LogManager;

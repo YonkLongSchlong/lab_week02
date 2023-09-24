@@ -1,10 +1,8 @@
-package dev.yonk.lab_week02.repositories;
+package dev.yonk.backend.repositories;
 
-import dev.yonk.lab_week02.enums.ProductStatus;
-import dev.yonk.lab_week02.models.Product;
+import dev.yonk.backend.models.Product;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.*;
-import jakarta.transaction.Transactional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

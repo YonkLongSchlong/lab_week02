@@ -1,6 +1,6 @@
-package dev.yonk.lab_week02.models;
+package dev.yonk.backend.models;
 
-import dev.yonk.lab_week02.enums.EmployeeStatus;
+import dev.yonk.backend.enums.EmployeeStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

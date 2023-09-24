@@ -1,8 +1,8 @@
-package dev.yonk.lab_week02.services;
+package dev.yonk.backend.services;
 
-import dev.yonk.lab_week02.enums.ProductStatus;
-import dev.yonk.lab_week02.models.Product;
-import dev.yonk.lab_week02.repositories.ProductRepository;
+import dev.yonk.backend.enums.ProductStatus;
+import dev.yonk.backend.models.Product;
+import dev.yonk.backend.repositories.ProductRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 

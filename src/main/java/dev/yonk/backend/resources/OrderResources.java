@@ -1,7 +1,7 @@
-package dev.yonk.lab_week02.resources;
+package dev.yonk.backend.resources;
 
-import dev.yonk.lab_week02.models.Order;
-import dev.yonk.lab_week02.services.OrderService;
+import dev.yonk.backend.models.Order;
+import dev.yonk.backend.services.OrderService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

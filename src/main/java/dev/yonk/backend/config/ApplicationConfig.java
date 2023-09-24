@@ -1,4 +1,4 @@
-package dev.yonk.lab_week02.config;
+package dev.yonk.backend.config;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

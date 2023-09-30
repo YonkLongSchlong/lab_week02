@@ -10,9 +10,8 @@ import java.util.Optional;
 
 @ApplicationScoped
 public class OrderService {
-
+    @Inject
     OrderRepository orderRepository;
-
     @Inject
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;

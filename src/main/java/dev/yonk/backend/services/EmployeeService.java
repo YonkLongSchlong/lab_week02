@@ -11,8 +11,8 @@ import java.util.Optional;
 
 @ApplicationScoped
 public class EmployeeService {
-
-    private final EmployeeRepository employeeRepository;
+    @Inject
+    private EmployeeRepository employeeRepository;
 
     @Inject
     public EmployeeService(EmployeeRepository employeeRepository) {

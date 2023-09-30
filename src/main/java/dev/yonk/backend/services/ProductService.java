@@ -11,8 +11,8 @@ import java.util.Optional;
 
 @ApplicationScoped
 public class ProductService {
-
-    private final ProductRepository productRepository;
+    @Inject
+    private ProductRepository productRepository;
 
     @Inject
     public ProductService(ProductRepository productRepository) {

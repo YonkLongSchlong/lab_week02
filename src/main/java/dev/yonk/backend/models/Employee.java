@@ -16,7 +16,6 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "emp_id", nullable = false)
     private long id;
-
     @Column(name = "full_name", columnDefinition = "varchar(255)", nullable = false)
     private String name;
     @Column(name = "dob", nullable = false)
@@ -36,6 +35,15 @@ public class Employee {
 
     public Employee(long id, String name, LocalDate dob, String email, String phone, String address, EmployeeStatus status) {
         this.id = id;
+        this.name = name;
+        this.dob = dob;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.status = status;
+    }
+
+    public Employee(String name, LocalDate dob, String email, String phone, String address, EmployeeStatus status) {
         this.name = name;
         this.dob = dob;
         this.email = email;

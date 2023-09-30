@@ -47,6 +47,13 @@ public class Product {
         this.manufacturer = manufacturer;
         this.status = status;
     }
+    public Product(String name, String description, String unit, String manufacturer, ProductStatus status) {
+        this.name = name;
+        this.description = description;
+        this.unit = unit;
+        this.manufacturer = manufacturer;
+        this.status = status;
+    }
 
     public long getId() {
         return id;
